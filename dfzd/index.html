@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>广东大工业电费明细</title>
+    <style>
+        *{margin:0;padding:0;box-sizing:border-box;font-family:system-ui, -apple-system, sans-serif;}
+        body{background:#f5f7fa;padding:12px;color:#222;font-size:15px;line-height:1.6}
+        .card{background:#fff;border-radius:10px;padding:16px;margin-bottom:14px;box-shadow:0 1px 4px #00000010}
+        h2{font-size:17px;margin-bottom:10px;color:#005ea6;border-left:4px solid #005ea6;padding-left:8px}
+        table{width:100%;border-collapse:collapse;margin:10px 0}
+        table td,table th{border:1px solid #eee;padding:8px 6px;font-size:14px}
+        th{background:#f0f7ff}
+        .split{height:1px;background:#eee;margin:14px 0}
+        .tip{background:#fff8e6;padding:10px;border-radius:8px;color:#b36b00;font-size:14px}
+        .num{font-weight:bold;color:#005ea6}
+        .mask{color:#999}
+    </style>
+</head>
+<body>
+    <div class="card">
+        <h2>一、单据基础信息</h2>
+        <p>户名：<span class="mask">****</span></p>
+        <p>用电地址：<span class="mask">广州市增城区永宁街（充电桩/换电服务业）地址隐藏</span></p>
+        <p>用电类别：大工业用电（两部制·电网代购）</p>
+        <p>结算周期：2026.05.01 ~ 2026.05.31</p>
+        <p>供电所：永宁供电所</p>
+        <p class="tip">本期无尖峰电量（5月非强制尖峰月份）</p>
+    </div>
+
+    <div class="card">
+        <h2>二、基础拆分电价（元/kWh）</h2>
+        <table>
+            <tr>
+                <td>代理购电价</td>
+                <td class="num">0.44570000</td>
+            </tr>
+            <tr>
+                <td>输配电价</td>
+                <td class="num">0.12600000</td>
+            </tr>
+            <tr>
+                <td>上网线损电价</td>
+                <td class="num">0.01580000</td>
+            </tr>
+            <tr>
+                <td>系统运行费单价</td>
+                <td class="num">0.05810000</td>
+            </tr>
+            <tr>
+                <td>基金附加单价</td>
+                <td class="num">0.02766875</td>
+            </tr>
+        </table>
+    </div>
+
+    <div class="card">
+        <h2>三、分时到户电价 & 本期用电量</h2>
+        <table>
+            <tr>
+                <th>时段档位</th>
+                <th>单价(元/kWh)</th>
+                <th>用电量(kWh)</th>
+                <th>分项电费(元)</th>
+            </tr>
+            <tr>
+                <td>尖峰</td>
+                <td class="num">1.37200000</td>
+                <td>0.00</td>
+                <td>0.00</td>
+            </tr>
+            <tr>
+                <td>高峰</td>
+                <td class="num">1.09760000</td>
+                <td>33.79</td>
+                <td>37.09</td>
+            </tr>
+            <tr>
+                <td>平段</td>
+                <td class="num">0.64560000</td>
+                <td>160.50</td>
+                <td>103.62</td>
+            </tr>
+            <tr>
+                <td>谷段</td>
+                <td class="num">0.24540000</td>
+                <td>620.81</td>
+                <td>152.35</td>
+            </tr>
+        </table>
+        <p>总用电量：<span class="num">815.10 kWh</span></p>
+        <p>时段电费合计：293.06 元；基金附加：22.57 元</p>
+        <p style="font-size:16px;margin-top:6px;">✅ <strong>本期总应收电费：<span class="num">315.63 元</span></strong></p>
+    </div>
+
+    <div class="card">
+        <h2>四、广东大工业标准峰谷时段</h2>
+        <p><strong>低谷（0.2454）</strong>：00:00–08:00（8小时）</p>
+        <p><strong>高峰（1.0976）</strong>：10:00–12:00、14:00–19:00（7小时）</p>
+        <p><strong>平段（0.6456）</strong>：剩余全天9小时</p>
+        <p><strong>尖峰（1.3720）</strong>：7/8/9月固定执行，高温≥35℃额外触发；时段11:00-12:00、15:00-17:00</p>
+    </div>
+
+    <div class="card">
+        <h2>五、峰谷价格比例（平段=1基准）</h2>
+        <table>
+            <tr>
+                <td>高峰 ÷ 平段</td>
+                <td class="num">≈1.70倍</td>
+            </tr>
+            <tr>
+                <td>尖峰 ÷ 平段</td>
+                <td class="num">≈2.125倍</td>
+            </tr>
+            <tr>
+                <td>低谷 ÷ 平段</td>
+                <td class="num">≈0.38倍</td>
+            </tr>
+            <tr>
+                <td>高峰 ÷ 低谷</td>
+                <td class="num">≈4.47倍</td>
+            </tr>
+            <tr>
+                <td>尖峰 ÷ 低谷</td>
+                <td class="num">≈5.59倍</td>
+            </tr>
+            <tr>
+                <td>尖峰 ÷ 高峰</td>
+                <td class="num">1.25倍</td>
+            </tr>
+        </table>
+        <p>简易比例：低谷 : 平 : 峰 : 尖峰 ≈ <span class="num">0.38 : 1 : 1.70 : 2.125</span></p>
+    </div>
+
+    <div class="tip">
+        💡 运营建议：充电桩换电优先安排00:00-08:00低谷时段充电，可大幅压缩用电成本
+    </div>
+</body>
+</html>
